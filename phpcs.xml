@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="laravel-production-stats">
+    <description>PHP CodeSniffer ruleset for laravel-production-stats</description>
+
+    <!-- Files to check -->
+    <file>src/</file>
+    <file>tests/</file>
+
+    <!-- Exclude patterns -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+    <!-- Use PSR-12 standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Additional rules -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+    <!-- Show sniff codes in messages -->
+    <arg value="s"/>
+</ruleset>
