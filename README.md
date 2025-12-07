@@ -38,6 +38,14 @@ No configuration needed. The package automatically tracks page load times and ge
 
 View in your browser's page source.
 
+## Testing
+
+Run the test suite with:
+
+```bash
+composer test
+```
+
 ## What Gets Tracked
 
 - **Page load time** - Time to render from Laravel bootstrap to response (milliseconds)
