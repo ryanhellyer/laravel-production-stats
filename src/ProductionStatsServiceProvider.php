@@ -17,13 +17,14 @@ use RyanHellyer\ProductionStats\Http\Middleware\InjectLoadTime;
  */
 class ProductionStatsServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
     }
 
-    public function boot()
+    public function boot(): void
     {
         // Register the middleware globally
+        // @phpstan-ignore-next-line
         $this->app->make(\Illuminate\Contracts\Http\Kernel::class)
             ->pushMiddleware(InjectLoadTime::class);
     }
