@@ -35,7 +35,7 @@ class InjectLoadTime
 
     protected function isHtmlResponse(Response $response): bool
     {
-        $contentType = $response->headers->get('Content-Type', '');
+        $contentType = (string) $response->headers->get('Content-Type', '');
 
         // Only process actual HTML responses to avoid breaking JSON, XML, etc.
         return str_contains($contentType, 'text/html');

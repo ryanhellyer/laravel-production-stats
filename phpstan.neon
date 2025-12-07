@@ -1,0 +1,10 @@
+parameters:
+    level: 8
+    paths:
+        - src/
+        - tests/
+    excludePaths:
+        analyseAndScan:
+            - vendor/
+            - node_modules (?)
+    reportUnmatchedIgnoredErrors: false

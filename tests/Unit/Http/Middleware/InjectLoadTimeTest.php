@@ -77,7 +77,7 @@ class InjectLoadTimeTest extends TestCase
         }
 
         $result = $this->middleware->handle(new Request(), $this->createNextMiddleware($response));
-        return $result->getContent();
+        return (string) $result->getContent();
     }
 
     /**
