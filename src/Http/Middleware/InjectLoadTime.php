@@ -19,7 +19,6 @@ class InjectLoadTime
             $content = $response->getContent();
 
             if ($content !== false) {
- 
                 $loadTime = $this->calculateLoadTime();
 
                 $loadTimeHtml = $this->formatLoadTimeHtml($loadTime);
@@ -37,7 +36,7 @@ class InjectLoadTime
     protected function isHtmlResponse(Response $response): bool
     {
         $contentType = $response->headers->get('Content-Type', '');
-        
+
         // Only process actual HTML responses to avoid breaking JSON, XML, etc.
         return str_contains($contentType, 'text/html');
     }
@@ -47,7 +46,7 @@ class InjectLoadTime
         if (defined('LARAVEL_START')) {
             return round((microtime(true) - LARAVEL_START) * 1000, 2);
         }
-        
+
         return 0;
     }
 
