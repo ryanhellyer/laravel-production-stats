@@ -17,7 +17,7 @@ For years I've added basic performance stats to WordPress sites as HTML comments
 ## Requirements
 
 - PHP 8.2+
-- Laravel 10, 11, or 12
+- Laravel 10+
 
 ## Installation
 
