@@ -53,7 +53,18 @@ composer test
 
 ## Changelog
 
-### 1.0
+### 1.1.1 — 2026-05-17
+- Fixed composer.json dependencies and description punctuation
+
+### 1.1 — 2025-12-07
+- Added PHPStan static analysis and fixed type issues
+- Added PHP CodeSniffer and fixed code style
+- Removed composer.lock from version tracking
+- Added test script and documentation
+- Added .gitignore
+- Added PHPUnit tests
+
+### 1.0 — 2025-12-07
 - Initial package release
 - Automatic page load time tracking
 - Generation timestamp display
